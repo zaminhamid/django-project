@@ -1,18 +1,105 @@
 {% extends "learning_logs/base.html" %}
+
 {% block content %}
 
-<p> <hr>
-<center><h1>   <font color="blue">     welcome to learning log</h1> </center>
-
-</p>
-
- <p style="text-align:center;"><img src="https://www.computerhope.com/cdn/media/logo-200-gray.png" alt="Logo"></p>
 
 
 
 
 
+<div class="zamin" style="font-size: 30px;align-items: center ;
+margin-left: 122px;
+margin-top: 56px;
+margin-right: 86px;
+color: rgb(153, 65, 109);
+border-radius: 10px;
+">
 
-<center> <div id="bottom"> site developed by zamin hamid 😍️</div> </center>
+
+    <h3></h3>
+    
+
+    
+    <div class="img" style="margin-left: 20vw;">
+        
+
+        <img src="https://neilpatel.com/wp-content/uploads/2017/09/blog-post-image-guide.jpg" alt="11 Best Practices for Adding Great Images to Every Blog Post" jsname="HiaYvf" jsaction="load:XAeZkd;" class="n3VNCb" data-noaft="1" style="width: 450px; height: 270px; margin: 61.5px 0px;
+        
+
+        ">
+        
+
+   
+
+        <ul>
+
+
+            {% for topic in topics %}
+
+            <li>
+
+
+
+                <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+             </li>
+
+            {% empty %}
+    
+             {% endfor %}
+        </ul>
+
+   
+
+        
+        <h2>Create your own ideas</h2>
+        <a href="{% url 'learning_logs:new_topic' %}">Add a new topic:</a>
+        
+        
+    
+    
+    </div>
+
+
+    <div class ="fotter" style =" height :140px;">
+
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+</div>
+
+
+
 
 {% endblock content %} 
+
+
+
+
+
+
+
+

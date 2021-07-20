@@ -1,11 +1,21 @@
 {% extends "learning_logs/base.html" %}
 {% block content %}
 
-<p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
-<p>Add a new entry:</p>
-<form action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
-{% csrf_token %}
-{{ form.as_p }}
-<button name='submit'>add entry</button>
-</form>
+
+<div class="zam" style="color:rgb(148, 17, 82);font-size: larger;padding: 10px;
+">
+
+
+    <p><a href="{% url 'learning_logs:topic' topic.id %}"><h3>{{ topic }}</h3></a></p>
+    <p> <h4>Add a new entry:</h4>
+    </p>
+    <form action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p> <h2>Add your plans goals  action</h2></p>
+    <button name='submit'>add entry</button>
+    </form>
+
+
+</div>
 {% endblock content %}

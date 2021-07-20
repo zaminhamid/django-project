@@ -1,10 +1,26 @@
 {% extends "learning_logs/base.html" %}
 {% block content %}
-<p>Add a new topic:</p>
+<div class="xa"  style="margin-left: 25vw;">
 
-<form action="{% url 'learning_logs:new_topic' %}" method='post'>
-{% csrf_token %}
-{{ form.as_p }}
-<button name="submit">add topic</button>
-</form>
+<p><h2>Add a new topic:</h2></p>
+</div>
+
+<div class="xam"  style="margin-left: 25vw;margin-top: 3vw;">
+    <img class="_2UpQX" sizes="(max-width: 767px) 100vw, (max-width: 532px) 500px, (max-height: 592px) 500px, (min-aspect-ratio: 4000/2256) calc((calc(100vh - 310px)) * 1.77305), calc(100vw - 32px)" srcset="https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=887&amp;q=80 887w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1187&amp;q=80 1187w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1487&amp;q=80 1487w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1774&amp;q=80 1774w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1787&amp;q=80 1787w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2087&amp;q=80 2087w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2374&amp;q=80 2374w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2387&amp;q=80 2387w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2687&amp;q=80 2687w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2974&amp;q=80 2974w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2987&amp;q=80 2987w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=3287&amp;q=80 3287w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=3574&amp;q=80 3574w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=3587&amp;q=80 3587w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=3887&amp;q=80 3887w, https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=4000&amp;q=80 4000w" src="https://images.unsplash.com/photo-1564140800994-913d848fdc8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="white and black the future is unwritten sticker close-up photography">
+</div>
+
+<div class="ham" style="margin-left: 33vw; ">
+    
+
+    <div class =" color" style="color: rgb(153,65,109);font-size: 30px;">
+       <h4> Add  a  new Topic</h4> 
+
+    </div>
+    <form action="{% url 'learning_logs:new_topic' %}" method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">add topic</button>
+    </form>
+</div>
+<div class ="fotter" style =" height :140px;">
 {% endblock content %}

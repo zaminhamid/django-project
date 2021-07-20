@@ -128,6 +128,7 @@ STATIC_URL = '/static/'
 
 
 
+
 #heroku setting
 if os.getcwd() == '/app':
 	
@@ -151,3 +152,4 @@ if os.getcwd() == '/app':
 	STATICFILES_DIRS = (
 	os.path.join(BASE_DIR, 'static'),
 	)
+

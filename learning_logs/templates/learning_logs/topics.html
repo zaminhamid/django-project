@@ -1,21 +1,41 @@
+
 {% extends "learning_logs/base.html" %}
 {% block content %}
-<p>Topics</p>
-<ul>
-{% for topic in topics %}
-
-
-<li>
-<a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
-</li>
 
 
 
+   
+    <div class ="zam" style="font-size:38px; padding: 20px; align-items: center;margin-left: 12px;" >
+    
+        <div class ="topic" style="border-radius: 10vh; color: rgb(146, 16, 16);font-size: 5vh;">
 
-{% empty %}
-<li>No topics have been added yet.</li>
-{% endfor %}
-</ul>
-<a href="{% url 'learning_logs:new_topic' %}">Add a new topic:</a>
+        <p><h3>Topics</h3></p>
+    </div>
+        <ul>
+            {% for topic in topics %}
+
+            <li>
+
+                <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+            </li>
+
+            {% empty %}
+            <li>No topics have been added yet.</li>
+            {% endfor %}
+        </ul>
+
+        <div class ="ram" style="font-size: 30px;  margin-left:15px;border-radius: 2vh; cursor: pointer;">
+
+            <a href="{% url 'learning_logs:new_topic' %}"> <h4>Add a New Topic</h4></a>
+        </div>
+    
+    </div>
+</div>
+
+
+
 {% endblock content %}
 
+ 
+
+    
